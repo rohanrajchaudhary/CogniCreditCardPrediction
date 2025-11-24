@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../static/favicon.svg">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Credit Card Payment Default Predictor</title>
+</head>
+<body>
+    <!-- Video Background -->
+    <video id="video-background" autoplay muted loop playsinline>
+        <source src="https://cdn.pixabay.com/video/2022/08/02/126201-737598118_large.mp4" type="video/mp4">
+    </video>
+    <div class="video-overlay"></div>
+
+    <!-- Floating Particles -->
+    <div class="particles">
+        <div class="particle" style="width: 60px; height: 60px; top: 10%; left: 10%; animation-delay: 0s;"></div>
+        <div class="particle" style="width: 40px; height: 40px; top: 20%; left: 80%; animation-delay: 2s;"></div>
+        <div class="particle" style="width: 80px; height: 80px; top: 60%; left: 20%; animation-delay: 4s;"></div>
+        <div class="particle" style="width: 50px; height: 50px; top: 70%; left: 70%; animation-delay: 1s;"></div>
+        <div class="particle" style="width: 70px; height: 70px; top: 40%; left: 50%; animation-delay: 3s;"></div>
+    </div>
+
+    <div class="container">
+        <h1>✨ Credit Card Payment Default Predictor ✨</h1>
+
+        <div class="section">
+            <h2>👤 User Details:</h2>
+            <div class="user-detial-box">
+                <div>
+                    <label for="education">🎓 Education</label>
+                    <select id="education">
+                        <option value="graduate school">Graduate School</option>
+                        <option value="university">University</option>
+                        <option value="high school">High School</option>
+                        <option value="others">Others</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="age">📅 Age:</label>
+                    <select id="age">
+                        <script>
+                            for (let i = 10; i <= 80; i++) {
+                                document.write('<option value="' + i + '">' + i + '</option>');
+                            }  
+                        </script>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="marriage">💍 Marriage:</label>
+                    <select id="marriage">
+                        <option value="1">Married</option>
+                        <option value="2">Single</option>
+                        <option value="3">Others</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="gender">⚧ Gender:</label>
+                    <select id="gender">
+                        <option value="1">Male</option>
+                        <option value="2">Female</option>
+                    </select>
+                </div>
+
+                <div style="grid-column: 1 / -1;">
+                    <label for="limit_balance">💳 Credit Card Limit:</label>
+                    <input type="number" id="limit_balance" name="limit_balance" placeholder="Enter credit limit">
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📄 Bill Details (for last 6 months):</h2>
+            <div class="bill-details-box">
+                <div>
+                    <label for="bill_amt1">Bill Amt for this month:</label>
+                    <input type="number" id="bill_amt1" placeholder="0.00">
+                </div>
+
+                <div>
+                    <label for="bill_amt2">Bill Amt for 1 month before:</label>
+                    <input type="number" id="bill_amt2" placeholder="0.00">
+                </div>
+
+                <div>
+                    <label for="bill_amt3">Bill Amt for 2 month before:</label>
+                    <input type="number" id="bill_amt3" placeholder="0.00">
+                </div>
+
+                <div>
+                    <label for="bill_amt4">Bill Amt for 3 month before:</label>
+                    <input type="number" id="bill_amt4" placeholder="0.00">
+                </div>
+
+                <div>
+                    <label for="bill_amt5">Bill Amt for 4 month before:</label>
+                    <input type="number" id="bill_amt5" placeholder="0.00">
+                </div>
+
+                <div>
+                    <label for="bill_amt6">Bill Amt for 5 month before:</label>
+                    <input type="number" id="bill_amt6" placeholder="0.00">
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📊 Repayment Status (for last 6 months):</h2>
+            <div class="repayment-status-box">
+                <div>
+                    <label for="pay_1">Repaid for this month:</label>
+                    <select id="pay_1">
+                        <option value="-1">Pay duly</option>
+                        <option value="1">Payment delay for one month</option>
+                        <option value="2">Payment delay for two months</option>
+                        <option value="3">Payment delay for three months</option>
+                        <option value="4">Payment delay for four months</option>
+                        <option value="5">Payment delay for five months</option>
+                        <option value="6">Payment delay for six months</option>
+                        <option value="7">Payment delay for seven months</option>
+                        <option value="8">Payment delay for eight months</option>
+                        <option value="9">Payment delay for nine months and above</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="pay_2">Repaid for 1 month before:</label>
+                    <select id="pay_2">
+                        <option value="-1">Pay duly</option>
+                        <option value="1">Payment delay for one month</option>
+                        <option value="2">Payment delay for two months</option>
+                        <option value="3">Payment delay for three months</option>
+                        <option value="4">Payment delay for four months</option>
+                        <option value="5">Payment delay for five months</option>
+                        <option value="6">Payment delay for six months</option>
+                        <option value="7">Payment delay for seven months</option>
+                        <option value="8">Payment delay for eight months</option>
+                        <option value="9">Payment delay for nine months and above</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="pay_3">Repaid for 2 month before:</label>
+                    <select id="pay_3">
+                        <option value="-1">Pay duly</option>
+                        <option value="1">Payment delay for one month</option>
+                        <option value="2">Payment delay for two months</option>
+                        <option value="3">Payment delay for three months</option>
+                        <option value="4">Payment delay for four months</option>
+                        <option value="5">Payment delay for five months</option>
+                        <option value="6">Payment delay for six months</option>
+                        <option value="7">Payment delay for seven months</option>
+                        <option value="8">Payment delay for eight months</option>
+                        <option value="9">Payment delay for nine months and above</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="pay_4">Repaid for 3 month before:</label>
+                    <select id="pay_4">
+                        <option value="-1">Pay duly</option>
+                        <option value="1">Payment delay for one month</option>
+                        <option value="2">Payment delay for two months</option>
+                        <option value="3">Payment delay for three months</option>
+                        <option value="4">Payment delay for four months</option>
+                        <option value="5">Payment delay for five months</option>
+                        <option value="6">Payment delay for six months</option>
+                        <option value="7">Payment delay for seven months</option>
+                        <option value="8">Payment delay for eight months</option>
+                        <option value="9">Payment delay for nine months and above</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="pay_5">Repaid for 4 month before:</label>
+                    <select id="pay_5">
+                        <option value="-1">Pay duly</option>
+                        <option value="1">Payment delay for one month</option>
+                        <option value="2">Payment delay for two months</option>
+                        <option value="3">Payment delay for three months</option>
+                        <option value="4">Payment delay for four months</option>
+                        <option value="5">Payment delay for five months</option>
+                        <option value="6">Payment delay for six months</option>
+                        <option value="7">Payment delay for seven months</option>
+                        <option value="8">Payment delay for eight months</option>
+                        <option value="9">Payment delay for nine months and above</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="pay_6">Repaid for 5 month before:</label>
+                    <select id="pay_6">
+                        <option value="-1">Pay duly</option>
+                        <option value="1">Payment delay for one month</option>
+                        <option value="2">Payment delay for two months</option>
+                        <option value="3">Payment delay for three months</option>
+                        <option value="4">Payment delay for four months</option>
+                        <option value="5">Payment delay for five months</option>
+                        <option value="6">Payment delay for six months</option>
+                        <option value="7">Payment delay for seven months</option>
+                        <option value="8">Payment delay for eight months</option>
+                        <option value="9">Payment delay for nine months and above</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>💰 Repayment Amount (for last 6 months):</h2>
+            <div class="repayment-amount-box">
+                <div>
+                    <label for="pay_amt1">Amount paid for this month:</label>
+                    <input type="number" id="pay_amt1" placeholder="0.00">
+                </div>
+
+                <div>
+                    <label for="pay_amt2">Amount paid for 1 month before:</label>
+                    <input type="number" id="pay_amt2" placeholder="0.00">
+                </div>
+
+                <div>
+                    <label for="pay_amt3">Amount paid for 2 month before:</label>
+                    <input type="number" id="pay_amt3" placeholder="0.00">
+                </div>
+
+                <div>
+                    <label for="pay_amt4">Amount paid for 3 month before:</label>
+                    <input type="number" id="pay_amt4" placeholder="0.00">
+                </div>
+                
+                <div>
+                    <label for="pay_amt5">Amount paid for 4 month before:</label>
+                    <input type="number" id="pay_amt5" placeholder="0.00">
+                </div>
+
+                <div>
+                    <label for="pay_amt6">Amount paid for 5 month before:</label>
+                    <input type="number" id="pay_amt6" placeholder="0.00">
+                </div>
+            </div>
+
+            <button onclick="predict()">🔮 Predict Default</button>
+        </div>
+
+        <div id="result-container" style="display: none;">
+            <h2>🎯 Prediction Result:</h2>
+            <p><strong>Customer Will default:</strong> <span id="default-status"></span></p>
+            <p><strong>Probability of default:</strong> <span id="default-probability"></span></p>
+        </div>
+    </div>
+
+    <div class="footer">Developed by <span>ArshXCoder</span></div>
+    <script src="../static/scripts.js"></script>
+</body>
+</html>

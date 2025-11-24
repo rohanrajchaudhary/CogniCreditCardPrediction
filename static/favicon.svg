@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <linearGradient id="cardGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#764ba2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f093fb;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="chipGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a8edea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fed6e3;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Credit Card Background -->
+  <rect x="2" y="8" width="28" height="18" rx="3" ry="3" fill="url(#cardGradient)" stroke="#fff" stroke-width="0.5"/>
+  
+  <!-- Card Chip -->
+  <rect x="4" y="12" width="6" height="4" rx="0.5" ry="0.5" fill="url(#chipGradient)"/>
+  
+  <!-- Card Number Lines -->
+  <rect x="12" y="13" width="8" height="1" fill="#fff" opacity="0.8"/>
+  <rect x="12" y="15" width="6" height="1" fill="#fff" opacity="0.6"/>
+  
+  <!-- Prediction Arrow -->
+  <path d="M20 20 L26 20 L24 18 M26 20 L24 22" stroke="#a8edea" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  
+  <!-- Dollar Sign -->
+  <text x="6" y="22" font-family="Arial, sans-serif" font-size="6" font-weight="bold" fill="#fff" opacity="0.9">$</text>
+</svg>
